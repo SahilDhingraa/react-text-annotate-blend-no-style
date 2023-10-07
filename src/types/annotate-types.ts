@@ -1,6 +1,7 @@
 export type Span = {
   start: number;
   end: number;
+  pageNo: number;
   text?: string;
   color?: string;
   tag?: string;

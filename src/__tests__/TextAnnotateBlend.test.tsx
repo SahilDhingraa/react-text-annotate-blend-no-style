@@ -7,6 +7,7 @@ const testVal = [
   {
     start: 0,
     end: 14,
+    pageNo: 0,
     text: "this is a test",
     tag: "tagA",
     color: "rgb(240,100,3)",
@@ -14,6 +15,7 @@ const testVal = [
   {
     start: 10,
     end: 14,
+    pageNo: 0,
     text: "test",
     tag: "tagB",
     color: "#563C5C",
@@ -24,7 +26,7 @@ test("renders without getSpan", () => {
   render(
     <TextAnnotateBlend
       content={testContent}
-      value={[{ start: 0, end: 5, tag: "PERSON", text: "this ", extra: 1 }]}
+      value={[{ start: 0, end: 5, tag: "PERSON", text: "this ", extra: 1, pageNo: 1 }]}
       onChange={() => {}}
     />
   );

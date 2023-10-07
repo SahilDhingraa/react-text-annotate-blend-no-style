@@ -94,11 +94,12 @@ export const splitWithOffsets = <T extends Span>(
   const splits = [];
 
   for (let offset of sortBy(offsets, (o) => o.start)) {
-    const { start, end } = offset;
+    const { start, end, pageNo } = offset;
     if (lastEnd < start) {
       splits.push({
         start: lastEnd,
         end: start,
+        pageNo: pageNo,
         content: text.slice(lastEnd, start),
       });
     }
@@ -118,6 +119,7 @@ export const splitWithOffsets = <T extends Span>(
     splits.push({
       start: lastEnd,
       end: text.length,
+      pageNo: 0,
       content: text.slice(lastEnd, text.length),
     });
   }

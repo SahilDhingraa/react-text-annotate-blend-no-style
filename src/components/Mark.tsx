@@ -7,6 +7,7 @@ export interface MarkProps<T> {
   content: string;
   start: number;
   end: number;
+  pageNo?: number;
   onClick: (arg: T) => void;
   tag?: string;
   color?: string;
@@ -19,6 +20,7 @@ const Mark = <T extends MarkedSpan>({
   className,
   end,
   start,
+  pageNo,
   onClick,
   content,
   tag,
@@ -34,6 +36,7 @@ const Mark = <T extends MarkedSpan>({
       }}
       data-start={start}
       data-end={end}
+      page-no={pageNo}
       onMouseUp={() => onClick({ start: start, end: end } as T)}
     >
       {content}
