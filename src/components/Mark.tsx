@@ -29,7 +29,7 @@ const Mark = <T extends MarkedSpan>({
       className={className}
       style={{
         backgroundColor: color || "#84d2ff",
-        padding: "0 4px",
+        // padding: "0 4px",
         ...(lumin && { color: "white" }),
       }}
       data-start={start}
