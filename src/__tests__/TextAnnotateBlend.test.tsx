@@ -36,7 +36,7 @@ test("renders when value and getSpan return match", () => {
   render(
     <TextAnnotateBlend
       content={testContent}
-      value={[{ start: 0, end: 5, tag: "PERSON", text: "foo", extra: 1 }]}
+      value={[{ start: 0, end: 5, tag: "PERSON", text: "foo", extra: 1 , pageNo: 1}]}
       onChange={() => {}}
       getSpan={(span: any) => ({
         ...span,

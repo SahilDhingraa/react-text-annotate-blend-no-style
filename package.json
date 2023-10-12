@@ -1,7 +1,7 @@
 {
   "name": "react-text-annotate-blend-no-style",
-  "version": "1.1.4",
-  "description": "React component for interactive blended text marking",
+  "version": "1.2.3",
+  "description": "React component for interactive blended text marking: added new page field to show in the highlighted text html tag",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {

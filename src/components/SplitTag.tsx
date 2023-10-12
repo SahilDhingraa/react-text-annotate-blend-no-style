@@ -7,7 +7,7 @@ export interface SplitProps<T> {
   content: string;
   start: number;
   end: number;
-  pageNo?: number;
+  pageNo: number;
   tag?: string;
   color?: string;
   onClick: (span: T) => void;
@@ -23,7 +23,7 @@ const SplitTag = <T extends MarkedSpan>(props: SplitProps<T>) => {
     <span
       data-start={props.start}
       data-end={props.end}
-      page-no={props.pageNo}
+      data-page={props.pageNo}
       onClick={() => props.onClick({ start: props.start, end: props.end } as T)}
     >
       {props.content}
